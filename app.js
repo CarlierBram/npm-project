@@ -16,14 +16,13 @@ io.sockets.on('connection', function(socket){
     io.emit('test',{id: "test"});
     
     socket.on("links",function(data){
-        console.log("linksclick " + data.id);
-        io.emit('linksklik', {id: "linksclick " + data.id});
+        io.emit('linksklik', {id: data.id});
     })
     socket.on("rechts",function(data){
-        console.log("rechtsclick " + data.id);
+        io.emit('rechtsklik', {id: data.id});
     })
     socket.on("shoot",function(data){
-        console.log("SHOOT " + data.id);
+        io.emit('shootklik', {id: data.id});
     })
     
 });
