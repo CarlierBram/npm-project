@@ -13,7 +13,7 @@ serv.listen(process.env.PORT || 8080);
 var io = require('socket.io')(serv,{});
 io.sockets.on('connection', function(socket){
     console.log("socket connection");
-    socket.emit('test',{id: "test"});
+    io.emit('test',{id: "test"});
     
     socket.on("links",function(data){
         console.log("linksclick " + data.id);
