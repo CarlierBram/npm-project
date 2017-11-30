@@ -8,8 +8,7 @@ app.get('/',function(req, res){
 });
 app.use('/client',express.static(__dirname + '/client'));
 
-serv.listen(2000);
-console.log("listen on 2000");
+serv.listen(process.env.PORT || 8080);
 
 var io = require('socket.io')(serv,{});
 io.sockets.on('connection', function(socket){
