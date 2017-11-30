@@ -17,6 +17,7 @@ io.sockets.on('connection', function(socket){
     
     socket.on("links",function(data){
         console.log("linksclick " + data.id);
+        socket.emit('test',{id: "test"});
     })
     socket.on("rechts",function(data){
         console.log("rechtsclick " + data.id);
