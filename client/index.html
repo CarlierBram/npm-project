@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="nl">
+<head>
+  <meta charset="utf-8"
+        name='viewport' 
+     content='width=device-width, initial-scale=4.0, maximum-scale=4.0, user-scalable=0'
+        >
+  <title>Werkstuk</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <style>
+    
+        html,body{overflow-x: hidden;}
+        body{position: relative;
+        }
+    
+    </style>
+</head>
+
+<body>
+  <p>Hello</p>
+    
+    <button id="linksB">Links</button>
+    <button id="rechtsB">Rechts</button>
+    <button id="shootB">Shoot</button>
+    
+    <script> 
+        var socket = io();
+        
+        document.getElementById("linksB").addEventListener("click", links);
+        document.getElementById("rechtsB").addEventListener("click", rechts);
+        document.getElementById("shootB").addEventListener("click", shoot);
+        
+        function links(){
+            socket.emit("links",{id: socket.id});
+        }
+        function rechts(){
+            socket.emit("rechts",{id: socket.id});
+        }
+        function shoot(){
+            socket.emit("shoot",{id: socket.id});
+        }
+    </script>
+</body>
+</html>
