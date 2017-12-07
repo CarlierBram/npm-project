@@ -1,0 +1,28 @@
+html,body{
+    float: left;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #FDFBE2;
+    position: relative;
+}
+#linksB,#rechtsB{
+    width: 20%;
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    
+}
+#rechtsB{
+    left: 30%;
+}
+.blogo{
+    width: 35%;
+}
+#shootB{
+    position: absolute;
+  left:  65%; 
+    width: 30%;
+    top: 20%;
+    
+}

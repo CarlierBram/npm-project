@@ -4,8 +4,11 @@
 <head>
   <meta charset="utf-8"
         name='viewport' 
-     content='width=device-width, initial-scale=4.0, maximum-scale=4.0, user-scalable=0'
+     content='width=device-width, initial-scale=4.0, maximum-scale=1, user-scalable=0'
         >
+    <link href="client/css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="client/script/script.js"></script>
   <title>Werkstuk</title>
     <script src="/socket.io/socket.io.js"></script>
     <style>
@@ -18,11 +21,11 @@
 </head>
 
 <body>
-  <p>Hello</p>
-    
-    <button id="linksB">Links</button>
-    <button id="rechtsB">Rechts</button>
-    <button id="shootB">Shoot</button>
+    <div class="container">
+    <img  class="blogo" src="client/achtergrondlogo.png">
+    <img id="linksB" src="client/left.png">
+    <img id="rechtsB" src="client/right.png">
+        <img id="shootB" src="client/shoot.png">
     
     <script> 
         var socket = io();
@@ -41,5 +44,6 @@
             socket.emit("shoot",{id: socket.id});
         }
     </script>
+        </div>
 </body>
 </html>
