@@ -26,9 +26,6 @@ io.sockets.on('connection', function(socket){
         io.emit('shootklik', {id: data.id});
     })
     
-    socket.on("auto",function(data){
-        io.emit('auto', {"auto"});
-    })
     
 });
 
